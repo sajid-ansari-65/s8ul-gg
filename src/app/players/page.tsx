@@ -26,31 +26,31 @@ export default function PlayersPage() {
       <Nav />
       <Ticker />
 
-      <section className="max-w-[1140px] mx-auto px-5 py-20">
-        <p className="font-[var(--font-rajdhani)] text-[0.62rem] text-[#E63946] tracking-[0.3em] uppercase mb-1.5">
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <p className="font-[var(--font-rajdhani)] text-sm text-[#E63946] tracking-[0.25em] uppercase mb-2">
           ESPORTS DIVISIONS
         </p>
-        <h1 className="font-[var(--font-orbitron)] text-[clamp(1.4rem,4vw,2.4rem)] font-black text-white mb-8">
+        <h1 className="font-[var(--font-orbitron)] text-[clamp(1.8rem,4vw,3rem)] font-black text-white mb-10">
           PLAYERS
         </h1>
 
         {/* Game Tabs */}
-        <div className="flex gap-2 mb-8">
+        <div className="flex gap-3 mb-10">
           {TABS.map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative rounded-sm px-6 py-2.5 font-[var(--font-orbitron)] text-[0.65rem] font-bold tracking-wider transition-all ${
+              className={`relative rounded-lg px-7 py-3 font-[var(--font-orbitron)] text-xs font-bold tracking-wider transition-all ${
                 activeTab === tab.id
                   ? "bg-[#FFD700]/10 border border-[#FFD700]/40 text-[#FFD700]"
-                  : "bg-[#141414] border border-[#1a1a1a] text-[#666] hover:text-[#999]"
+                  : "bg-[#141414] border border-[#222] text-[#777] hover:text-white hover:border-[#333]"
               }`}
             >
               {tab.label}
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="player-tab"
-                  className="absolute top-0 left-0 right-0 h-[2px] bg-[#FFD700]"
+                  className="absolute top-0 left-0 right-0 h-[2px] bg-[#FFD700] rounded-t-lg"
                   transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 />
               )}
@@ -68,21 +68,21 @@ export default function PlayersPage() {
               transition={{ duration: 0.3 }}
             >
               {/* Team Name */}
-              <div className="flex items-center gap-4 mb-6">
-                <h2 className="font-[var(--font-orbitron)] text-lg font-black text-[#FFD700]">
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="font-[var(--font-orbitron)] text-xl font-black text-[#FFD700]">
                   {roster.teamName}
                 </h2>
                 {roster.sponsor && (
-                  <span className="font-[var(--font-rajdhani)] text-[0.6rem] text-[#B8960A] tracking-wider bg-[#FFD700]/8 px-3 py-1 rounded-sm">
+                  <span className="font-[var(--font-rajdhani)] text-xs text-[#B8960A] tracking-wider bg-[#FFD700]/8 px-4 py-1.5 rounded">
                     Powered by {roster.sponsor}
                   </span>
                 )}
               </div>
 
               {/* Player Images from s8ul.gg */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
                 {images.slice(0, 8).map((img, i) => (
-                  <div key={i} className="rounded-sm overflow-hidden border border-[#1a1a1a] bg-[#141414] hover:border-[#FFD700]/30 transition-all">
+                  <div key={i} className="rounded-lg overflow-hidden border border-[#222] bg-[#141414] hover:border-[#FFD700]/30 transition-all">
                     <img
                       src={`https://s8ul.gg${img}`}
                       alt={`${activeTab} Player ${i + 1}`}
@@ -94,37 +94,37 @@ export default function PlayersPage() {
               </div>
 
               {/* Player Roster Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
                 {roster.players.map(player => (
                   <div
                     key={player.name}
-                    className="rounded-sm bg-[#141414] border border-[#1a1a1a] p-5 hover:border-[#FFD700]/25 transition-all group"
+                    className="rounded-lg bg-[#141414] border border-[#222] p-6 hover:border-[#FFD700]/25 transition-all group"
                   >
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-sm bg-[#0A0A0A] border border-[#222] flex items-center justify-center text-xl group-hover:border-[#FFD700]/30 transition-colors">
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-14 h-14 rounded-lg bg-[#0A0A0A] border border-[#2a2a2a] flex items-center justify-center text-2xl group-hover:border-[#FFD700]/30 transition-colors">
                         {player.icon}
                       </div>
                       <div>
-                        <div className="font-[var(--font-orbitron)] text-[0.78rem] font-bold text-[#FFD700] flex items-center gap-2">
+                        <div className="font-[var(--font-orbitron)] text-base font-bold text-[#FFD700] flex items-center gap-2">
                           {player.name}
                           {player.tag && (
-                            <span className="text-[0.48rem] text-[#E63946] bg-[#E63946]/10 px-1.5 py-0.5 rounded-sm">
+                            <span className="text-xs text-[#E63946] bg-[#E63946]/10 px-2 py-0.5 rounded">
                               {player.tag}
                             </span>
                           )}
                         </div>
                         {player.realName && (
-                          <div className="font-[var(--font-rajdhani)] text-[0.62rem] text-[#888]">
+                          <div className="font-[var(--font-rajdhani)] text-sm text-[#999]">
                             {player.realName}
                           </div>
                         )}
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="font-[var(--font-rajdhani)] text-[0.62rem] text-[#666] tracking-wider">
+                      <span className="font-[var(--font-rajdhani)] text-sm text-[#777] tracking-wider">
                         {player.role}
                       </span>
-                      <span className="font-[var(--font-rajdhani)] text-[0.58rem] text-[#555]">
+                      <span className="font-[var(--font-rajdhani)] text-sm text-[#666]">
                         {player.nationality}
                         {player.age ? ` · ${player.age}y` : ""}
                       </span>
@@ -134,23 +134,23 @@ export default function PlayersPage() {
 
                 {/* Coach */}
                 {roster.coach && (
-                  <div className="rounded-sm bg-gradient-to-br from-[#FFD700]/5 to-transparent border border-[#FFD700]/15 p-5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-sm bg-[#0A0A0A] border border-[#FFD700]/20 flex items-center justify-center text-xl">
+                  <div className="rounded-lg bg-gradient-to-br from-[#FFD700]/5 to-transparent border border-[#FFD700]/15 p-6">
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-14 h-14 rounded-lg bg-[#0A0A0A] border border-[#FFD700]/20 flex items-center justify-center text-2xl">
                         {roster.coach.icon}
                       </div>
                       <div>
-                        <div className="font-[var(--font-orbitron)] text-[0.78rem] font-bold text-[#FFD700]">
+                        <div className="font-[var(--font-orbitron)] text-base font-bold text-[#FFD700]">
                           {roster.coach.name}
                         </div>
                         {roster.coach.realName && (
-                          <div className="font-[var(--font-rajdhani)] text-[0.62rem] text-[#888]">
+                          <div className="font-[var(--font-rajdhani)] text-sm text-[#999]">
                             {roster.coach.realName}
                           </div>
                         )}
                       </div>
                     </div>
-                    <span className="font-[var(--font-rajdhani)] text-[0.62rem] text-[#B8960A] tracking-wider">
+                    <span className="font-[var(--font-rajdhani)] text-sm text-[#B8960A] tracking-wider">
                       {roster.coach.role}
                     </span>
                   </div>

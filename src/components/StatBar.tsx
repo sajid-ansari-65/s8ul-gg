@@ -13,19 +13,19 @@ export default function StatBar({ label, value, max, color }: StatBarProps) {
   const pct = Math.min((value / max) * 100, 100);
 
   return (
-    <div className="mb-2.5">
-      <div className="flex justify-between mb-1">
-        <span className="font-[var(--font-rajdhani)] text-[0.6rem] text-[#666] tracking-[0.1em] uppercase">
+    <div className="mb-4">
+      <div className="flex justify-between mb-1.5">
+        <span className="font-[var(--font-rajdhani)] text-sm text-[#888] tracking-[0.08em] uppercase">
           {label}
         </span>
         <span
-          className="font-[var(--font-orbitron)] text-[0.65rem] font-bold"
+          className="font-[var(--font-orbitron)] text-sm font-bold"
           style={{ color }}
         >
           {value}
         </span>
       </div>
-      <div className="h-[3px] bg-[#1a1a1a] rounded-sm overflow-hidden">
+      <div className="h-[4px] bg-[#222] rounded overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}

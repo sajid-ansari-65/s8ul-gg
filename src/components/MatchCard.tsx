@@ -5,9 +5,9 @@ import type { EWCMatch } from "@/lib/constants";
 
 function LiveDot() {
   return (
-    <span className="inline-flex items-center gap-1.5">
-      <span className="w-[7px] h-[7px] rounded-full bg-[#E63946] shadow-[0_0_8px_#E63946] pulse-live" />
-      <span className="font-[var(--font-rajdhani)] text-[0.6rem] text-[#E63946] font-bold tracking-[0.12em]">
+    <span className="inline-flex items-center gap-2">
+      <span className="w-2 h-2 rounded-full bg-[#E63946] shadow-[0_0_8px_#E63946] pulse-live" />
+      <span className="font-[var(--font-rajdhani)] text-xs text-[#E63946] font-bold tracking-[0.1em]">
         LIVE
       </span>
     </span>
@@ -29,9 +29,9 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
 
   return (
     <div
-      className={`relative overflow-hidden rounded-sm ${
-        isLive ? "border border-[#E63946]/30" : "border border-[#1a1a1a]"
-      } ${compact ? "p-3" : "p-4"} bg-[#141414]`}
+      className={`relative overflow-hidden rounded-lg ${
+        isLive ? "border border-[#E63946]/30" : "border border-[#222]"
+      } ${compact ? "p-4" : "p-5"} bg-[#141414]`}
     >
       {/* Live top bar */}
       {isLive && (
@@ -39,15 +39,15 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
       )}
 
       {/* Header */}
-      <div className="flex justify-between items-center mb-2.5">
-        <span className="font-[var(--font-rajdhani)] text-[0.55rem] text-[#444] tracking-[0.1em]">
+      <div className="flex justify-between items-center mb-3">
+        <span className="font-[var(--font-rajdhani)] text-xs text-[#666] tracking-[0.08em]">
           {match.round}
         </span>
         {isLive ? (
           <LiveDot />
         ) : (
-          <span className={`font-[var(--font-rajdhani)] text-[0.55rem] tracking-[0.08em] ${
-            isUpcoming ? "text-[#B8960A]" : "text-[#444]"
+          <span className={`font-[var(--font-rajdhani)] text-xs tracking-[0.06em] ${
+            isUpcoming ? "text-[#B8960A]" : "text-[#555]"
           }`}>
             {isUpcoming ? match.time : "COMPLETED"}
           </span>
@@ -56,8 +56,8 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
 
       {/* Teams + Score */}
       <div className="flex items-center justify-between">
-        <span className={`font-[var(--font-orbitron)] text-[0.72rem] font-bold tracking-wider ${
-          isS8ulTeam(match.team1) ? "text-[#FFD700]" : "text-[#ccc]"
+        <span className={`font-[var(--font-orbitron)] text-sm font-bold tracking-wider ${
+          isS8ulTeam(match.team1) ? "text-[#FFD700]" : "text-[#ddd]"
         }`}>
           {match.team1}
         </span>
@@ -86,8 +86,8 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
           </AnimatePresence>
         </div>
 
-        <span className={`font-[var(--font-orbitron)] text-[0.72rem] font-bold tracking-wider text-right ${
-          isS8ulTeam(match.team2) ? "text-[#FFD700]" : "text-[#ccc]"
+        <span className={`font-[var(--font-orbitron)] text-sm font-bold tracking-wider text-right ${
+          isS8ulTeam(match.team2) ? "text-[#FFD700]" : "text-[#ddd]"
         }`}>
           {match.team2}
         </span>
@@ -98,7 +98,7 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
         <motion.button
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.98 }}
-          className="mt-3 w-full bg-gradient-to-br from-[#E63946] to-[#9E2832] rounded-sm py-2.5 font-[var(--font-rajdhani)] text-[0.65rem] text-white font-bold tracking-[0.12em] cursor-pointer pulse-btn"
+          className="mt-4 w-full bg-gradient-to-br from-[#E63946] to-[#9E2832] rounded-lg py-3 font-[var(--font-rajdhani)] text-sm text-white font-bold tracking-[0.1em] cursor-pointer pulse-btn"
         >
           ▶ WATCH LIVE
         </motion.button>

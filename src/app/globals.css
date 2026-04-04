@@ -22,14 +22,16 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
   background: var(--s8ul-black);
-  color: #ffffff;
+  color: #e0e0e0;
   font-family: "Rajdhani", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 ::selection {
@@ -39,17 +41,20 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--s8ul-black);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 215, 0, 0.2);
+  background: rgba(255, 215, 0, 0.25);
   border-radius: 3px;
 }
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.4);
+}
 
-/* CRT Scan Lines Overlay */
+/* Subtle Scan Lines Overlay — toned down */
 .scan-lines {
   position: fixed;
   inset: 0;
@@ -58,11 +63,12 @@ body {
   background: repeating-linear-gradient(
     0deg,
     transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.06) 2px,
-    rgba(0, 0, 0, 0.06) 4px
+    transparent 3px,
+    rgba(0, 0, 0, 0.03) 3px,
+    rgba(0, 0, 0, 0.03) 6px
   );
   mix-blend-mode: multiply;
+  opacity: 0.5;
 }
 
 /* Gold Shimmer Text */
@@ -79,7 +85,7 @@ body {
   animation: gold-shimmer 4s linear infinite;
 }
 
-/* Glitch Effect */
+/* Glitch Effect — toned down */
 .glitch {
   position: relative;
 }
@@ -96,15 +102,15 @@ body {
 .glitch::before {
   color: var(--s8ul-red);
   clip-path: inset(20% 0 30% 0);
-  transform: translate(-2px, 1px);
-  opacity: 0.6;
+  transform: translate(-1px, 0.5px);
+  opacity: 0.35;
   -webkit-text-fill-color: var(--s8ul-red);
 }
 .glitch::after {
   color: var(--s8ul-cyan);
   clip-path: inset(60% 0 10% 0);
-  transform: translate(2px, -1px);
-  opacity: 0.4;
+  transform: translate(1px, -0.5px);
+  opacity: 0.25;
   -webkit-text-fill-color: var(--s8ul-cyan);
 }
 
@@ -112,17 +118,17 @@ body {
 .ticker-wrap {
   overflow: hidden;
   background: var(--s8ul-gold);
-  padding: 5px 0;
+  padding: 6px 0;
 }
 .ticker-content {
   display: flex;
   white-space: nowrap;
-  animation: marquee 22s linear infinite;
+  animation: marquee 30s linear infinite;
   font-family: "Rajdhani", sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--s8ul-black);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 /* Pulse Animations */
@@ -136,33 +142,33 @@ body {
 /* HUD Corner Brackets */
 .hud-corner {
   position: absolute;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   z-index: 3;
 }
 .hud-corner--tl {
-  top: 16px;
-  left: 16px;
-  border-top: 2px solid rgba(255, 215, 0, 0.15);
-  border-left: 2px solid rgba(255, 215, 0, 0.15);
+  top: 20px;
+  left: 20px;
+  border-top: 2px solid rgba(255, 215, 0, 0.12);
+  border-left: 2px solid rgba(255, 215, 0, 0.12);
 }
 .hud-corner--tr {
-  top: 16px;
-  right: 16px;
-  border-top: 2px solid rgba(255, 215, 0, 0.15);
-  border-right: 2px solid rgba(255, 215, 0, 0.15);
+  top: 20px;
+  right: 20px;
+  border-top: 2px solid rgba(255, 215, 0, 0.12);
+  border-right: 2px solid rgba(255, 215, 0, 0.12);
 }
 .hud-corner--bl {
-  bottom: 16px;
-  left: 16px;
-  border-bottom: 2px solid rgba(255, 215, 0, 0.15);
-  border-left: 2px solid rgba(255, 215, 0, 0.15);
+  bottom: 20px;
+  left: 20px;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.12);
+  border-left: 2px solid rgba(255, 215, 0, 0.12);
 }
 .hud-corner--br {
-  bottom: 16px;
-  right: 16px;
-  border-bottom: 2px solid rgba(255, 215, 0, 0.15);
-  border-right: 2px solid rgba(255, 215, 0, 0.15);
+  bottom: 20px;
+  right: 20px;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.12);
+  border-right: 2px solid rgba(255, 215, 0, 0.12);
 }
 
 /* Keyframes */
