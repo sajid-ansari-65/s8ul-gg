@@ -15,7 +15,7 @@ export default function VaultPage() {
       <Nav />
       <Ticker />
 
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 pt-10 pb-24">
         {/* Header */}
         <p className="font-[var(--font-rajdhani)] text-sm text-[#B8960A] tracking-[0.25em] uppercase mb-2">
           BGIS 2026 · CHENNAI

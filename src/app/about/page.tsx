@@ -9,7 +9,7 @@ export default function AboutPage() {
     <main>
       <Nav />
       <Ticker />
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 pt-10 pb-24">
         <p className="font-[var(--font-rajdhani)] text-sm text-[#B8960A] tracking-[0.25em] uppercase mb-2">OUR STORY</p>
         <h1 className="font-[var(--font-orbitron)] text-[clamp(1.8rem,4vw,3rem)] font-black text-white mb-4">{ABOUT_TEXT.headline}</h1>
         <h2 className="font-[var(--font-rajdhani)] text-[clamp(1rem,2.5vw,1.3rem)] text-[#999] mb-10 max-w-2xl leading-relaxed">{ABOUT_TEXT.subheadline}</h2>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           {FOUNDERS.map(f => (
             <div key={f.name} className="rounded-lg bg-[#141414] border border-[#222] p-7 hover:border-[#FFD700]/20 transition-colors">
               <div className="flex items-center gap-4 mb-4">
-                <img src={`https://s8ul.gg${f.image}`} alt={f.name} className="w-18 h-18 rounded-lg object-cover border border-[#FFD700]/15" loading="lazy" />
+                <img src={`https://s8ul.gg${f.image}`} alt={f.name} className="w-20 h-20 rounded-lg object-cover border border-[#FFD700]/15" loading="lazy" />
                 <div>
                   <div className="font-[var(--font-orbitron)] text-base font-bold text-[#FFD700]">{f.name}</div>
                   {f.alias && <span className="font-[var(--font-rajdhani)] text-xs text-[#E63946] tracking-wider">{f.alias}</span>}

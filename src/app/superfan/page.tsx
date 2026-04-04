@@ -24,7 +24,7 @@ export default function SuperfanPage() {
       <Nav />
       <Ticker />
 
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 pt-10 pb-24">
         <p className="font-[var(--font-rajdhani)] text-sm text-[#00f0ff] tracking-[0.25em] uppercase mb-2">
           EWC CLUB PARTNER
         </p>
