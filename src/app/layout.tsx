@@ -57,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${rajdhani.variable} ${orbitron.variable}`}>
-      <body className="bg-s8ul-black text-white antialiased">
+      <body className="bg-s8ul-black text-white antialiased" suppressHydrationWarning>
         {/* CRT Scan Line Overlay */}
         <div className="scan-lines" />
         {children}

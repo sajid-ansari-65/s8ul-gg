@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "**.wp.com",
       },
+      {
+        protocol: "https",
+        hostname: "liquipedia.net",
+        pathname: "/commons/images/**",
+      },
     ],
     deviceSizes: [360, 414, 512, 640, 750, 828, 1080, 1200, 1920],
     minimumCacheTTL: 60 * 60 * 24,

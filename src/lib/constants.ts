@@ -74,8 +74,8 @@ export const ORG_STATS = {
   ewcViewers2025: "10.5M",
 };
 
-// ── Esports Rosters (REAL) ──
-export type GameTitle = "BGMI" | "VALORANT" | "CODM" | "POKEMON_UNITE" | "FREE_FIRE";
+// ── Esports Rosters (REAL — updated May 2026) ──
+export type GameTitle = "BGMI" | "VALORANT" | "POKEMON_UNITE" | "FREE_FIRE";
 
 export interface RosterPlayer {
   name: string; realName: string; role: string; nationality: string;
@@ -87,39 +87,31 @@ export interface Roster {
   players: RosterPlayer[]; coach?: RosterPlayer;
 }
 
+// Drop player photos into public/img/players/{bgmi|valorant}/
+// Any format works — .jpg .jpeg .png .webp — the page tries them in that order.
+// e.g. goblin.jpg  OR  goblin.png  OR  goblin.webp
 export const ROSTERS: Roster[] = [
   {
     game: "BGMI", teamName: "Team iQOOSouL", sponsor: "iQOO",
     players: [
-      { name: "Goblin", realName: "Siddharth Choudhary", role: "IGL / Assaulter", nationality: "India", age: 22, icon: "💀" },
-      { name: "Legit", realName: "", role: "Fragger", nationality: "India", age: 20, icon: "👑", tag: "Star" },
-      { name: "Thunder", realName: "", role: "Support", nationality: "India", age: 20, icon: "⚡" },
-      { name: "Jokerr", realName: "", role: "Assaulter", nationality: "India", age: 20, icon: "🃏" },
-      { name: "NakuL", realName: "", role: "Scout / IGL", nationality: "India", age: 21, icon: "🎯" },
+      { name: "NakuL",  realName: "Nakul Sharma",   role: "IGL / Scout", nationality: "India", age: 22, icon: "🎯", tag: "Captain", image: "/img/players/bgmi/nakul" },
+      { name: "Goblin", realName: "Harsh Paudwal",  role: "Fragger",     nationality: "India",          icon: "💀",                  image: "/img/players/bgmi/goblin" },
+      { name: "LEGIT",  realName: "Yash Choudhary", role: "Fragger",     nationality: "India",          icon: "👑", tag: "MVP",      image: "/img/players/bgmi/legit" },
+      { name: "Jokerr", realName: "Khush Singh",    role: "Assaulter",   nationality: "India",          icon: "🃏",                  image: "/img/players/bgmi/jokerr" },
+      { name: "Thunder",realName: "Aaryaman Seth",  role: "Support",     nationality: "India",          icon: "⚡",                  image: "/img/players/bgmi/thunder" },
     ],
-    coach: { name: "Mortal", realName: "Naman Mathur", role: "Mentor / Owner", nationality: "India", age: 28, icon: "🎮" },
+    coach: { name: "Ayogi", realName: "Rahul", role: "Coach", nationality: "India", icon: "🎮", image: "/img/players/bgmi/ayogi" },
   },
   {
     game: "VALORANT", teamName: "S8UL Esports",
     players: [
-      { name: "SkRossi", realName: "Ganesh Gangadhar", role: "IGL / Sentinel", nationality: "India", age: 28, icon: "🎯", tag: "Captain" },
-      { name: "Anq", realName: "Ilya Matyash", role: "Duelist", nationality: "Russia", age: 20, icon: "🔥" },
-      { name: "RvK", realName: "Rishi Vijayakumar", role: "Initiator", nationality: "India", age: 25, icon: "⚡" },
-      { name: "Yuvi", realName: "Yuvraj Singh", role: "Controller", nationality: "India", icon: "🛡️" },
-      { name: "xexxar", realName: "", role: "Flex", nationality: "", icon: "💎" },
+      { name: "RvK",    realName: "Rishi Vijayakumar", role: "IGL / Initiator", nationality: "India",      age: 25, icon: "⚡", tag: "Captain", image: "/img/players/valorant/rvk" },
+      { name: "SkRossi",realName: "Ganesh Gangadhar",  role: "Sentinel",        nationality: "India",      age: 28, icon: "🎯",                  image: "/img/players/valorant/skrossi" },
+      { name: "Anq",    realName: "Ilya Matyash",      role: "Duelist",         nationality: "Russia",     age: 20, icon: "🔥",                  image: "/img/players/valorant/anq" },
+      { name: "Yuvi",   realName: "Yuvraj Singh",      role: "Controller",      nationality: "India",               icon: "🛡️",                  image: "/img/players/valorant/yuvi" },
+      { name: "xexxar", realName: "Alen Kadyrbayev",   role: "Flex",            nationality: "Kazakhstan",          icon: "💎",                  image: "/img/players/valorant/xexxar" },
     ],
-    coach: { name: "hacker", realName: "Vikrant Pujari", role: "Head Coach", nationality: "India", icon: "🧠" },
-  },
-  {
-    game: "CODM", teamName: "S8UL Esports",
-    players: [
-      { name: "JOKOs", realName: "Samartha Ganesh Ghadge", role: "Slayer", nationality: "India", icon: "💀" },
-      { name: "SAMs", realName: "Samruddha Ghadge", role: "Obj", nationality: "India", icon: "🎯" },
-      { name: "Marvel", realName: "", role: "SMG", nationality: "India", icon: "⚡" },
-      { name: "Frann", realName: "", role: "AR", nationality: "India", icon: "🔥" },
-      { name: "Jezz", realName: "", role: "Flex", nationality: "India", icon: "💎" },
-    ],
-    coach: { name: "BurnZ", realName: "Chiranthan Shetty", role: "Coach", nationality: "India", icon: "🧠" },
+    coach: { name: "hacker", realName: "Vikrant Pujari", role: "Head Coach", nationality: "India", icon: "🧠", image: "/img/players/valorant/hacker" },
   },
 ];
 
@@ -241,11 +233,11 @@ export interface BGISPlayer {
 }
 
 export const BGIS_ROSTER: BGISPlayer[] = [
-  { name: "GOBLIN", role: "IGL", kills: 47, dmg: 312, rating: 9.2, clutch: 8.8, icon: "💀", tag: "IGL" },
-  { name: "LEGIT", role: "Fragger", kills: 42, dmg: 295, rating: 8.9, clutch: 8.1, icon: "👑", tag: "MVP" },
-  { name: "THUNDER", role: "Support", kills: 31, dmg: 201, rating: 8.1, clutch: 6.9, icon: "⚡" },
-  { name: "JOKERR", role: "Assaulter", kills: 38, dmg: 278, rating: 8.7, clutch: 7.4, icon: "🃏" },
-  { name: "NAKUL", role: "Scout / IGL", kills: 29, dmg: 188, rating: 7.8, clutch: 7.2, icon: "🎯" },
+  { name: "NAKUL",  role: "IGL / Scout", kills: 29, dmg: 188, rating: 7.8, clutch: 7.2, icon: "🎯", tag: "Best IGL" },
+  { name: "GOBLIN", role: "Fragger",     kills: 47, dmg: 312, rating: 9.2, clutch: 8.8, icon: "💀" },
+  { name: "LEGIT",  role: "Fragger",     kills: 42, dmg: 295, rating: 8.9, clutch: 8.1, icon: "👑", tag: "MVP" },
+  { name: "JOKERR", role: "Assaulter",   kills: 38, dmg: 278, rating: 8.7, clutch: 7.4, icon: "🃏" },
+  { name: "THUNDER",role: "Support",     kills: 31, dmg: 201, rating: 8.1, clutch: 6.9, icon: "⚡" },
 ];
 
 export interface BGISRound {
