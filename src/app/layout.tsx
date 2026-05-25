@@ -19,7 +19,7 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: "S8UL — Global Digital HQ | BGIS 2026 Champions",
   description:
-    "Official S8UL Global Digital HQ. BGIS 2026 Champions. EWC 2026 Club Partner. Road to Riyadh. Team Soul & 8Bit Esports.",
+    "Official S8UL Global Digital HQ. BGIS 2026 Champions. EWC 2026 Club Partner. Road to Paris. Team Soul & 8Bit Esports.",
   keywords: [
     "S8UL",
     "Team Soul",
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     "EWC 2026",
     "Esports",
     "Gaming",
-    "Riyadh",
+    "Paris",
   ],
   openGraph: {
     title: "S8UL — Global Digital HQ",
-    description: "BGIS 2026 Champions · EWC Club Partner · Road to Riyadh",
+    description: "BGIS 2026 Champions · EWC Club Partner · Road to Paris",
     type: "website",
     locale: "en_US",
     siteName: "S8UL",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "S8UL — Global Digital HQ",
-    description: "BGIS 2026 Champions · EWC Club Partner · Road to Riyadh",
+    description: "BGIS 2026 Champions · EWC Club Partner · Road to Paris",
   },
 };
 

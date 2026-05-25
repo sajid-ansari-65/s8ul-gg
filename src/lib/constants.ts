@@ -54,7 +54,7 @@ export interface Achievement {
 }
 
 export const ACHIEVEMENTS: Achievement[] = [
-  { year: "2026", title: "EWC 2026 Club Partner", description: "2nd consecutive year as one of 40 official Esports World Cup Club Partners. Competing across 8+ titles in Riyadh.", icon: "🌍" },
+  { year: "2026", title: "EWC 2026 Club Partner", description: "2nd consecutive year as one of 40 official Esports World Cup Club Partners. Competing across 8+ titles in Paris.", icon: "🌍" },
   { year: "2026", title: "BGIS 2026 Champions", description: "Team iQOOSouL wins BGIS Grand Finals in Chennai. 577K peak viewers — all-time record.", icon: "🏆" },
   { year: "2026", title: "Valorant Rebuild", description: "Signed SkRossi as IGL with Anq, RvK, Yuvi, xexxar and coach hacker for VCSA 2026.", icon: "🎯" },
   { year: "2025", title: "EWC 2025 — Only Indian Org", description: "Competed in 8 titles: Apex, CoD Warzone, Chess, EAFC, MLBB, Tekken 8 and more.", icon: "⚡" },
@@ -137,7 +137,7 @@ export interface NewsItem {
 }
 
 export const NEWS_ITEMS: NewsItem[] = [
-  { title: "S8UL Selected as EWC 2026 Club Partner", date: "April 2026", category: "EWC", description: "S8UL returns for a 2nd year as one of 40 official Club Partners for EWC 2026 in Riyadh.", icon: "🌍" },
+  { title: "S8UL Selected as EWC 2026 Club Partner", date: "April 2026", category: "EWC", description: "S8UL returns for a 2nd year as one of 40 official Club Partners for EWC 2026 in Paris.", icon: "🌍" },
   { title: "BGIS 2026 Champions — Chennai", date: "March 2026", category: "BGMI", description: "Team iQOOSouL lifts the BGIS 2026 trophy with 577K peak viewers.", icon: "🏆" },
   { title: "SkRossi Leads New Valorant Roster", date: "March 2026", category: "Valorant", description: "Complete rebuild with SkRossi as IGL for VCSA 2026.", icon: "🎯" },
   { title: "S8UL Enters COD: Mobile", date: "March 2025", category: "CODM", description: "Power-packed CODM roster unveiled with Ghost, JOKOs, SAMs.", icon: "💀" },
@@ -147,9 +147,9 @@ export const NEWS_ITEMS: NewsItem[] = [
 
 // ── EWC 2026 (REAL) ──
 export const EWC_2026 = {
-  startDate: "2026-07-06T00:00:00+03:00",
+  startDate: "2026-07-06T00:00:00+02:00",
   endDate: "2026-08-23T00:00:00+03:00",
-  location: "Riyadh, Saudi Arabia",
+  location: "Paris, France",
   totalPrizePool: "$75,000,000",
   totalCompetitions: 25,
   totalGames: 24,
@@ -199,7 +199,7 @@ export const MERCH_ITEMS: MerchItem[] = [
   { name: "S8UL Victory Hoodie — Gold", priceINR: "₹3,499", priceUSD: "$42", tag: "DROP IN 48H", tagColor: "#B8960A", emoji: "🧥" },
   { name: "S8UL Logo Cap — Limited", priceINR: "₹999", priceUSD: "$12", tag: "IN STOCK", tagColor: "#1a6b2a", emoji: "🧢" },
   { name: "S8UL × EWC Mousepad", priceINR: "₹1,499", priceUSD: "$18", tag: "IN STOCK", tagColor: "#1a6b2a", emoji: "🖱️" },
-  { name: "Road to Riyadh Tee", priceINR: "₹1,799", priceUSD: "$22", tag: "PRE-ORDER", tagColor: "#00f0ff", emoji: "👕" },
+  { name: "Road to Paris Tee", priceINR: "₹1,799", priceUSD: "$22", tag: "PRE-ORDER", tagColor: "#00f0ff", emoji: "👕" },
   { name: "SouL Legit MVP Poster", priceINR: "₹599", priceUSD: "$7", tag: "IN STOCK", tagColor: "#1a6b2a", emoji: "🖼️" },
 ];
 
@@ -207,12 +207,12 @@ export const MERCH_ITEMS: MerchItem[] = [
 export interface SuperfanPerk { icon: string; title: string; desc: string; }
 
 export const SUPERFAN_PERKS: SuperfanPerk[] = [
-  { icon: "🎫", title: "Watch Party Access", desc: "Free entry to watch-parties in Mumbai, Delhi, Bangalore, Chennai & Riyadh." },
+  { icon: "🎫", title: "Watch Party Access", desc: "Free entry to watch-parties in Mumbai, Delhi, Bangalore, Chennai & Paris." },
   { icon: "🏷️", title: "Merch Drops First", desc: "48-hour early access to every limited edition drop on shop.s8ul.gg." },
   { icon: "🎮", title: "Play with Pros", desc: "Monthly lottery for custom matches with Soul & 8Bit rosters." },
   { icon: "⭐", title: "Loyalty Points", desc: "Earn XP for engagement — redeem for signed gear & meet-and-greets." },
   { icon: "📺", title: "BTS Content", desc: "Exclusive behind-the-scenes from S8UL Gaming House 2.0." },
-  { icon: "🏆", title: "Riyadh VIP Raffle", desc: "Win an all-expenses-paid trip to EWC 2026 in Riyadh." },
+  { icon: "🏆", title: "Paris VIP Raffle", desc: "Win an all-expenses-paid trip to EWC 2026 in Paris." },
 ];
 
 // ── About Text (from s8ul.gg) ──

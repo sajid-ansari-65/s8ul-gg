@@ -12,7 +12,7 @@ const NAV_CARDS = [
     color: "#FFD700",
   },
   {
-    title: "ROAD TO RIYADH",
+    title: "ROAD TO PARIS",
     desc: "EWC 2026 live dashboard. Match schedules, group standings & Soul/8Bit tracker.",
     btn: "VIEW DASHBOARD",
     href: "/ewc",

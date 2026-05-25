@@ -53,12 +53,20 @@ export default function HeroSection() {
           animate={mounted ? "visible" : "hidden"}
           variants={fadeUp}
         >
-          <span className="inline-flex items-center gap-3 px-6 py-2.5 bg-[#FFD700]/8 border border-[#FFD700]/20 rounded">
-            <span className="text-xl">🏆</span>
-            <span className="font-[var(--font-orbitron)] text-xs text-[#FFD700] font-bold tracking-[0.18em]">
-              BGIS 2026 CHAMPIONS · CHENNAI
+          <div className="inline-flex items-center gap-3 flex-wrap justify-center">
+            <span className="inline-flex items-center gap-2.5 px-5 py-2 bg-[#FFD700]/8 border border-[#FFD700]/20 rounded">
+              <span className="text-lg">🏆</span>
+              <span className="font-[var(--font-orbitron)] text-xs text-[#FFD700] font-bold tracking-[0.15em]">
+                BGIS 2026 CHAMPIONS
+              </span>
             </span>
-          </span>
+            <span className="inline-flex items-center gap-2.5 px-5 py-2 bg-[#E63946]/8 border border-[#E63946]/20 rounded">
+              <span className="text-lg">🌍</span>
+              <span className="font-[var(--font-orbitron)] text-xs text-[#E63946] font-bold tracking-[0.15em]">
+                EWC 2026 · PARIS
+              </span>
+            </span>
+          </div>
         </motion.div>
 
         {/* Title */}
@@ -97,7 +105,7 @@ export default function HeroSection() {
         >
           <CountdownTimer />
           <p className="font-[var(--font-rajdhani)] text-sm text-[#555] tracking-[0.15em] uppercase mt-3">
-            COUNTDOWN TO EWC RIYADH 2026
+            COUNTDOWN TO EWC PARIS 2026
           </p>
         </motion.div>
 
@@ -113,7 +121,7 @@ export default function HeroSection() {
             href="/ewc"
             className="bg-gradient-to-br from-[#FFD700] to-[#B8960A] rounded px-10 py-4 font-[var(--font-orbitron)] text-sm font-black text-[#0A0A0A] tracking-wider shadow-[0_4px_24px_rgba(255,215,0,0.2)] hover:shadow-[0_6px_32px_rgba(255,215,0,0.3)] hover:brightness-110 transition-all"
           >
-            ROAD TO RIYADH →
+            ROAD TO PARIS →
           </Link>
           <Link
             href="/vault"

@@ -15,13 +15,13 @@ export default function EWCPage() {
       <section className="max-w-6xl mx-auto px-6 pt-10 pb-24">
         {/* Header */}
         <p className="font-[var(--font-rajdhani)] text-sm text-[#9E2832] tracking-[0.25em] uppercase mb-2">
-          EWC 2026 · RIYADH
+          EWC 2026 · PARIS
         </p>
         <h1 className="font-[var(--font-orbitron)] text-[clamp(1.8rem,4vw,3rem)] font-black text-white mb-4">
-          ROAD TO RIYADH
+          ROAD TO PARIS
         </h1>
         <p className="font-[var(--font-rajdhani)] text-base text-[#999] mb-10 max-w-xl leading-relaxed">
-          S8UL is an official EWC 2026 Club Partner for the 2nd consecutive year — competing across 8+ titles in Riyadh.
+          S8UL is an official EWC 2026 Club Partner for the 2nd consecutive year — competing across 8+ titles in Paris.
         </p>
 
         {/* Countdown */}

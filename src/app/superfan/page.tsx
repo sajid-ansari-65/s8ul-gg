@@ -6,12 +6,12 @@ import Nav from "@/components/Nav";
 import Ticker from "@/components/Ticker";
 
 const PERKS = [
-  { icon: "🎫", title: "Watch Party Access", desc: "Free entry to city watch-parties in Mumbai, Delhi, Bangalore, Chennai & Riyadh." },
+  { icon: "🎫", title: "Watch Party Access", desc: "Free entry to city watch-parties in Mumbai, Delhi, Bangalore, Chennai & Paris." },
   { icon: "🏷️", title: "Merch Drops First", desc: "48-hour early access to every limited edition drop before public sale." },
   { icon: "🎮", title: "Play with Pros", desc: "Monthly lottery for custom matches with Soul & 8Bit rosters." },
   { icon: "⭐", title: "Loyalty Points", desc: "Earn XP for engagement — redeem for signed gear, shoutouts & meet-and-greets." },
   { icon: "📺", title: "BTS Content", desc: "Exclusive behind-the-scenes vlogs, bootcamp footage & player diaries." },
-  { icon: "🏆", title: "Riyadh VIP Raffle", desc: "Superfans eligible for an all-expenses-paid trip to EWC Riyadh 2026." },
+  { icon: "🏆", title: "Paris VIP Raffle", desc: "Superfans eligible for an all-expenses-paid trip to EWC Paris 2026." },
 ];
 
 export default function SuperfanPage() {
@@ -47,7 +47,7 @@ export default function SuperfanPage() {
                   JOIN THE S8UL SUPERFAN PROGRAM
                 </h2>
                 <p className="font-[var(--font-rajdhani)] text-base text-[#888] leading-relaxed max-w-lg mx-auto mb-8">
-                  Official EWC 2026 Club Partner fan experience. Earn loyalty XP, access city watch-parties, win trips to Riyadh, and get early merch drops.
+                  Official EWC 2026 Club Partner fan experience. Earn loyalty XP, access city watch-parties, win trips to Paris, and get early merch drops.
                 </p>
 
                 <div className="flex gap-3 max-w-md mx-auto flex-wrap">
